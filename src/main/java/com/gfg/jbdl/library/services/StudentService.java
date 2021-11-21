@@ -1,5 +1,6 @@
 package com.gfg.jbdl.library.services;
 
+import com.gfg.jbdl.library.models.Book;
 import com.gfg.jbdl.library.models.Student;
 import com.gfg.jbdl.library.repositories.StudentRepository;
 import com.gfg.jbdl.library.requests.StudentCreateRequest;
@@ -18,5 +19,9 @@ public class StudentService {
 
     public Student getStudent(int id) {
         return studentRepository.findById(id).orElse(null);
+    }
+
+    public void addOrUpdateBook(Student student) {
+        studentRepository.save(student);
     }
 }

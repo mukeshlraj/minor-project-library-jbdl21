@@ -33,5 +33,9 @@ public class Transactions {
 
     private int fine;
 
+    @Enumerated(value = EnumType.STRING)
     private TransactionStatus transactionStatus;
+
+    @Enumerated(value = EnumType.STRING)
+    private TransactionType transactionType;
 }

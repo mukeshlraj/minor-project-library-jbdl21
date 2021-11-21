@@ -41,4 +41,15 @@ public class BookService {
     public Book getBookByID(int id) {
         return bookRepository.findById(id).orElse(null);
     }
+
+    public void updateBook(int id, int cost) {
+//        Book book = bookRepository.findById(id).orElse(null);
+//        book.setCost(cost);
+//        bookRepository.save(book);
+        bookRepository.updateBook(id, cost);
+    }
+
+    public void addOrUpdateBook(Book book) {
+        bookRepository.save(book);
+    }
 }

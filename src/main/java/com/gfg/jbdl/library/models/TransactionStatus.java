@@ -1,7 +1,7 @@
 package com.gfg.jbdl.library.models;
 
 public enum TransactionStatus {
-    SUCESS,
+    SUCCESS,
     FAILED,
     PENDING
 }

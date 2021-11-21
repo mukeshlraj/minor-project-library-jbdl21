@@ -19,11 +19,11 @@ public class BookController {
 
     @GetMapping("/book")
     public Book getBook(@RequestParam("id") int id) {
-        return null;
+        return bookService.getBookByID(id);
     }
 
     @PutMapping("/book")
     public void updateBook(@RequestParam("id") int id, @RequestParam("cost") int cost) {
-
+        bookService.updateBook(id, cost);
     }
 }
