@@ -2,6 +2,7 @@ package com.gfg.jbdl.library.models;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -22,6 +23,8 @@ public class Student {
     private String name;
     private String country;
     private int age;
+    private String email;
+    private String password;
 
     @Column(unique = true, nullable = false)
     private String contact;
